@@ -1,0 +1,369 @@
+main {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  /* background-color: #ff8c6b; */
+  background-color: #eaeaea;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .box {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  height: 640px;
+  background-color: #fff;
+  border-radius: 3.3rem;
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+.box .innerBox {
+  position: absolute;
+  width: calc(100% - 4.1rem);
+  height: calc(100% - 4.1rem);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box .innerBox .formsWrap {
+  position: absolute;
+  height: 100%;
+  width: 45%;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  transition: 0.8s ease-in-out;
+}
+
+form.RegisterForm {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.formsWrap form {
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  transition: opacity 0.02s 0.4s;
+}
+
+.formsWrap form .logo {
+  display: flex;
+  align-items: center;
+}
+.formsWrap form .logo img {
+  width: 27px;
+  margin-right: 0.3rem;
+}
+
+.formsWrap form .logo h4 {
+  font-size: 1.1rem;
+  margin-top: -9px;
+  letter-spacing: -0.5px;
+  color: #151111;
+}
+.formsWrap form .heading h2 {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #151111;
+}
+.formsWrap form .heading h6 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #bababa;
+  display: inline-block;
+}
+.toggle {
+  display: inline;
+  color: #151111;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.toggle:hover {
+  color: #8371fd;
+}
+form .inputWrap {
+  position: relative;
+  height: 37px;
+  margin-bottom: 2rem;
+}
+
+.inputWrap .inputField {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #bbb;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+}
+
+.inputWrap label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #bbb;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.imageInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.imageInput .note {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #bababa;
+}
+
+.imageInput input::-webkit-file-upload-button {
+  color: var(--color-white);
+  color: #151111;
+  width: 100%;
+  border-bottom: 1px solid #bbb;
+  padding: 10px 0;
+  border-radius: none;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.imageInput .profileImage {
+  margin-left: 10px;
+}
+
+.inputField:focus,
+.inputField:not(:placeholder-shown).inputField:not(:focus) {
+  border-color: #151111;
+}
+
+.inputField:focus ~ .formLabel,
+.inputField:not(:placeholder-shown).inputField:not(:focus) ~ .formLabel {
+  top: -0.5rem;
+  font-size: 0.8rem;
+}
+
+.formsWrap form .loginButton {
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  background-color: #151111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+
+.formsWrap form .loginButton:hover {
+  background-color: #8371fd;
+}
+
+.signUpMode .box .innerBox .formsWrap {
+  left: 55%;
+}
+
+.signUpMode .box .innerBox .carousel {
+  left: 0;
+}
+
+.signUpMode form.loginForm {
+  opacity: 0;
+  pointer-events: none;
+}
+.signUpMode form.RegisterForm {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.box .innerBox .carousel {
+  position: absolute;
+  height: 100%;
+  width: 55%;
+  top: 0;
+  left: 45%;
+  background-color: #ffe0d2;
+  border-radius: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding-bottom: 2rem;
+  transition: 0.8s ease-in-out;
+}
+
+.imagesWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.slideImage {
+  width: 100%;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slideImage.show {
+  opacity: 1;
+  transform: none;
+}
+
+.textSlider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textWrapper {
+  max-height: 2.2rem;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.textGroup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(0);
+  transition: 0.5s;
+}
+
+.slideTwice {
+  transform: translateY(-2.2rem);
+}
+.slideThrice {
+  transform: translateY(-4.4rem);
+}
+
+.textGroup h2 {
+  line-height: 2.2rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bullets span {
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: #aaa;
+  margin: 0 0.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.bullets span.isActive {
+  width: 1.1rem;
+  background-color: #151111;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .textGroup h2 {
+    line-height: 2.2rem;
+    font-size: 1.2rem;
+  }
+
+  main .box {
+    height: auto;
+    max-width: 550px;
+    overflow: hidden;
+  }
+  .box .innerBox {
+    position: static;
+    transform: none;
+    width: revert;
+    height: revert;
+    padding: 2rem;
+  }
+  .box .innerBox .formsWrap {
+    position: revert;
+    width: 100%;
+    height: auto;
+  }
+  .box .innerBox .carousel {
+    position: revert;
+    height: auto;
+    width: 100%;
+    padding: 3rem 2rem;
+    display: flex;
+    display: none;
+  }
+  .imagesWrapper {
+    display: none;
+  }
+  .textSlider {
+    width: 100%;
+  }
+  .formsWrap form {
+    max-width: revert;
+    padding: 1.5rem 2.5rem 2.5rem;
+    transition: transform 0.8s ease-in-out, opacity 0.45s linear;
+  }
+  .formsWrap form .heading {
+    margin: 2rem 0;
+  }
+  form.RegisterForm {
+    transform: translateX(100%);
+  }
+  .signUpMode form.loginForm {
+    transform: translateX(-100%);
+  }
+  .signUpMode form.RegisterForm {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 530px) {
+  main {
+    padding: 1rem;
+  }
+  main .box {
+    border-radius: 2rem;
+  }
+  .box .innerBox {
+    padding: 1rem;
+  }
+  .box .innerBox .carousel {
+    padding: 1.5rem 1rem;
+    border-radius: 1.6rem;
+  }
+  .textWrapper {
+    margin-bottom: 1rem;
+  }
+  .formsWrap form {
+    max-width: revert;
+    padding: 1rem 2rem 1.5rem;
+  }
+}

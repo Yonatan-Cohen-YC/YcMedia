@@ -1,0 +1,98 @@
+.updateUserContainer {
+  width: 50%;
+  height: 400px;
+  color: #151515;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+  position: relative;
+}
+
+.updateUserHeader {
+  padding: 10px 0;
+}
+.updateUserContainer .updateUserForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputWrap {
+  position: relative;
+  height: 37px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.updateUserContainer .imageInput {
+  width: 100%;
+}
+
+.inputWrap .inputField {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid red;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #151111;
+}
+
+.inputWrap label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #bbb;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.updateButton {
+  display: inline-block;
+  width: 100%;
+  height: 43px;
+  background-color: #151111;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+
+.closeButton {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  cursor: pointer;
+}
+
+.updateButton:hover {
+  background-color: #8371fd;
+}
+
+.closeButton a {
+  color: #151111;
+}
+
+@media screen and (max-width: 600px) {
+  .updateUserContainer {
+    width: 100%;
+    height: 400px;
+    color: #151515;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: var(--card-border-radius);
+    z-index: 100;
+  }
+}
